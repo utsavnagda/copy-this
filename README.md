@@ -16,5 +16,6 @@ Read https://raw.githubusercontent.com/utsavnagda/copy-this/main/prompts/outboun
 ## Prompts
 - `prompts/outbound-autopsy.md`: find which of five checks is breaking your cold outreach (about 16 questions).
   Built on Eric Nowoslawski's method for diagnosing a failed cold email campaign.
+  The checks, in order: 0 Fit + volume, 1 Sending, 2 List, 3 Offer + copy, 4 Follow-up + booking (scored separately).
 
 Free to copy, change and share. By Utsav Nagda.

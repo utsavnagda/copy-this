@@ -1,7 +1,7 @@
 # The Outbound Autopsy
 *A free diagnostic by Utsav Nagda, built on Eric Nowoslawski's (Growth Engine X) method for diagnosing a
 failed cold email campaign. Paste this file (or its link) into Claude, ChatGPT/Codex, Grok or any AI assistant.*
-*Version 2.0 · 2026-10 · Free to copy, change and share.*
+*Version 2.1 · 2026-10 · Free to copy, change and share.*
 
 ---
 
@@ -40,9 +40,11 @@ Rules for you, the AI:
 → Decide the mode (READINESS or AUTOPSY) and tell the owner which one in one line.
 
 ## Step 2: The checks, in Eric Nowoslawski's order
-His order: is it the sending, is it the list, or is it the offer (copy is reworked together with the
-offer). Sending and list are objective checks, so rule them out before blaming the offer. Ask the
-questions for each check in order and score silently as you go.
+The order, used everywhere in this file (questions, scorecard, verdict, plan):
+**0. Fit + volume → 1. Sending → 2. List → 3. Offer + copy → 4. Follow-up + booking (scored separately).**
+Eric's own words for 1-3: is it the infrastructure, is it the list, or is it the offer (copy is reworked
+together with the offer). Sending and list are objective checks, so rule them out before blaming the
+offer. Ask the questions for each check in this order and score silently as you go.
 
 ### 0. FIT + VOLUME (is outbound right for you, and was it really tested?)
 4. Describe your best 3 customers: type of business, size, the job title of the person who said yes.
@@ -54,7 +56,8 @@ questions for each check in order and score silently as you go.
 > Scoring FIT: PASS = one customer is worth $5,000 or more AND 100,000+ people fit the description.
 > BELOW BAR = either one is lower (Eric Nowoslawski's agency turns away businesses under these:
 > too few people to email, or each customer is worth too little to pay back). UNKNOWN if not given.
-> Scoring VOLUME (per campaign): under 1,000 emails = **NOT TESTED** (no verdict either way).
+> Scoring VOLUME (per campaign, counting every email sent): under 1,000 emails = **NOT TESTED** (no
+> verdict either way).
 > 1,000+ with zero positive replies = **FAILED** (Eric: shut it off). 1,000+ with one or more positive
 > replies but under 3,000 sent = **KEEP RUNNING to 3,000** before judging. 3,000+ = **TESTED**.
 > The line for a verdict is 1,000 sends; 3,000 applies only once a positive reply has come in. Never call
@@ -77,7 +80,8 @@ questions for each check in order and score silently as you go.
 > under 80%, far above 30 emails per mailbox per day (his normal volume), sending from the main company
 > domain, or key answers UNKNOWN. 2 = separate domains, about 30 per mailbox per day, every mailbox at
 > 1%+ replies, warm-up 99-100%, about 80%+ back on the auto-reply test.
-> A broken mailbox means the emails it sent do not count toward VOLUME.
+> If Sending scores 0, the emails from the failing mailboxes probably never arrived: say so in the
+> Sending reason ("these sends don't count; the campaign was never really tested").
 
 ### 2. LIST (who you contacted)
 11. *[if tried]* Who did you actually contact? Where did the list come from (bought, scraped, a tool, your
@@ -130,27 +134,28 @@ OUTBOUND AUTOPSY: <business type>                Mode: <READINESS | AUTOPSY>
 1. Sending      <0|1|2>  <reason>
 2. List         <0|1|2>  <reason>
 3. Offer + copy <0|1|2>  <pillars hit: n of 5; reason>
+4. Follow-up    <0|1|2>  (scored separately) <reason>
 ────────────────────────────────────────────────────────────────
 Main bottleneck: <ONE number + name>
-Scored separately: 4. Follow-up + booking <0|1|2>  <reason>
 Unknowns to find out: <list of UNKNOWN items, or "none">
 ```
 
-**How to pick the ONE main bottleneck** (use the first rule that applies, in this order):
+**How to pick the ONE main bottleneck** (walk the checks in order, 0 → 4; the first rule that applies wins):
 1. Fit is BELOW BAR → **0. Fit**. Say plainly that by Eric Nowoslawski's bar, cold email is unlikely to pay
    back for this business, and that this is worth deciding before fixing anything else.
-2. Sending scored 0 → **1. Sending** (the emails probably never reached anyone, so the list, offer and copy
-   were never actually tested).
-3. List scored 0 → **2. List** (the right message to the wrong people still fails).
-4. Volume is NOT TESTED or KEEP RUNNING → **0. Volume** ("not tested yet": no verdict on the offer until
-   1,000 sends from healthy mailboxes, or 3,000 if a positive reply came in).
+2. Volume is NOT TESTED or KEEP RUNNING → **0. Volume** ("not tested yet": no verdict on the offer until
+   1,000 sends, or 3,000 if a positive reply came in). If Sending also scored 0, the plan's first step is
+   fixing those mailboxes, because sends from them won't count.
+3. Sending scored 0 → **1. Sending** (the emails probably never reached anyone, so the list, offer and copy
+   were never actually tested, even if Volume says FAILED or TESTED).
+4. List scored 0 → **2. List** (the right message to the wrong people still fails).
 5. Offer + copy scored 0 or 1, or Volume is FAILED → **3. Offer + copy** (Eric: if the mailboxes and the
    list are good, all the effort goes into a new offer, its framing and the copy).
 6. Checks 0-3 all fine and follow-up scored 0 or 1 → **4. Follow-up + booking**.
 7. Otherwise the lowest score; ties go to the lower number.
 
 Say it plainly: *"Your outbound didn't fail because outbound doesn't work. It failed at <X>."*
-(For rule 4: *"Your outbound didn't fail. It was never fully tested."*)
+(For rule 2: *"Your outbound didn't fail. It was never fully tested."*)
 In READINESS mode: *"Before you send anything, fix <X>; it's the one most likely to sink a first campaign."*
 
 ---
@@ -162,7 +167,8 @@ Give the owner, in this order:
    - 0. Fit → write down what one customer is worth and how many businesses fit; if either is under Eric
      Nowoslawski's bar, decide whether outbound is worth it before spending more.
    - 0. Volume → don't change the offer yet; plan how to reach 1,000 sends (3,000 if a positive reply came
-     in) from healthy mailboxes at about 30 per mailbox per day.
+     in) from healthy mailboxes at about 30 per mailbox per day (if Sending scored 0, fix those mailboxes
+     first).
    - 1. Sending → stop sending from the main company domain; pull reply rate per mailbox for anything with
      100+ sends and stop using every mailbox under 1%; check warm-up scores; save auto-reply addresses from
      past replies and run the auto-reply test (about 80% should answer back; under 60%, stop using that
