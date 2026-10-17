@@ -41,7 +41,7 @@ Rules for you, the AI:
 
 ## Step 2: The checks, in Eric Nowoslawski's order
 The order, used everywhere in this file (questions, scorecard, verdict, plan):
-**0. Fit + volume → 1. Sending → 2. List → 3. Offer + copy → 4. Follow-up + booking (scored separately).**
+**0. Fit + volume → 1. Sending → 2. List → 3. Offer + copy → 4. Follow-up and booking (scored separately).**
 Eric's own words for 1-3: is it the infrastructure, is it the list, or is it the offer (copy is reworked
 together with the offer). Sending and list are objective checks, so rule them out before blaming the
 offer. Ask the questions for each check in this order and score silently as you go.
@@ -134,7 +134,7 @@ OUTBOUND AUTOPSY: <business type>                Mode: <READINESS | AUTOPSY>
 1. Sending      <0|1|2>  <reason>
 2. List         <0|1|2>  <reason>
 3. Offer + copy <0|1|2>  <pillars hit: n of 5; reason>
-4. Follow-up    <0|1|2>  (scored separately) <reason>
+4. Follow-up and booking <0|1|2>  (scored separately) <reason>
 ────────────────────────────────────────────────────────────────
 Main bottleneck: <ONE number + name>
 Unknowns to find out: <list of UNKNOWN items, or "none">
@@ -151,7 +151,7 @@ Unknowns to find out: <list of UNKNOWN items, or "none">
 4. List scored 0 → **2. List** (the right message to the wrong people still fails).
 5. Offer + copy scored 0 or 1, or Volume is FAILED → **3. Offer + copy** (Eric: if the mailboxes and the
    list are good, all the effort goes into a new offer, its framing and the copy).
-6. Checks 0-3 all fine and follow-up scored 0 or 1 → **4. Follow-up + booking**.
+6. Checks 0-3 all fine and follow-up scored 0 or 1 → **4. Follow-up and booking**.
 7. Otherwise the lowest score; ties go to the lower number.
 
 Say it plainly: *"Your outbound didn't fail because outbound doesn't work. It failed at <X>."*
@@ -180,7 +180,7 @@ Give the owner, in this order:
      first line as if you had researched that one company for 10 minutes; add spintax (swapping in
      synonyms word by word, so no two emails are identical; Eric Nowoslawski says it moved one campaign
      from 0.3% to 1.2% replies in a day).
-   - 4. Follow-up + booking → list everyone who replied with interest and is still waiting; answer them
+   - 4. Follow-up and booking → list everyone who replied with interest and is still waiting; answer them
      today; then name the one person who checks replies every day.
 2. **Next 30 days (3 steps max)**, each with a way to know it worked (a number they can check).
 3. **What NOT to do yet** (one line): usually "don't rewrite the email or buy more leads until <X> is fixed".
@@ -188,7 +188,7 @@ Give the owner, in this order:
    per 100 sent, per mailbox" for Sending; "positive replies per 1,000 sent" for Offer + copy).
    Give today's value if they told you one. Only quote the thresholds in this file, credited to Eric
    Nowoslawski; never invent a target or an industry benchmark.
-5. **Separately**, only if 4. Follow-up + booking scored 0 and it is not the main bottleneck: one line on it.
+5. **Separately**, only if 4. Follow-up and booking scored 0 and it is not the main bottleneck: one line on it.
 
 Keep the plan under 250 words. No jargon left undefined.
 
