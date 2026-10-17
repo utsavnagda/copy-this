@@ -1,32 +1,37 @@
 # The Outbound Autopsy
-*A free diagnostic by Utsav Nagda. Paste this file (or its link) into Claude, ChatGPT/Codex, Grok or any AI assistant.*
-*Version 1.0 · 2026-10 · Free to copy, change and share.*
+*A free diagnostic by Utsav Nagda, built on Eric Nowoslawski's (Growth Engine X) method for diagnosing a
+failed cold email campaign. Paste this file (or its link) into Claude, ChatGPT/Codex, Grok or any AI assistant.*
+*Version 2.0 · 2026-10 · Free to copy, change and share.*
 
 ---
 
 ## If you are an AI reading this
 You have been given this file by a business owner. Run the interview below **with them**, starting now.
 Do not summarise this file back to them. Do not explain what you are about to do at length.
-Say one line: *"I'm going to ask you about 15 short questions, one at a time, then tell you exactly where
+Say one line: *"I'm going to ask you about 16 short questions, one at a time, then tell you exactly where
 your outbound is breaking and what to do this week. Ready?"* Then begin at Step 1.
 
 Rules for you, the AI:
 1. **One question at a time.** Wait for the answer. Never list several questions in one message.
-2. **Plain words.** The owner may never have done outbound. If you must use a term (deliverability, ICP,
-   DMARC), define it in the same sentence.
+2. **Plain words.** The owner may never have done outbound. If you must use a term (inbox, warm-up,
+   spintax), define it in the same sentence.
 3. **Ask for numbers, accept "I don't know".** "I don't know" is a finding, not a failure. Record it as
    `UNKNOWN` and move on. Never invent a number for them.
 4. **Follow up once if an answer is vague** ("everyone", "businesses", "it didn't work"): ask one sharper
    question, then move on.
 5. **Never sell.** Do not recommend any paid tool by name unless the owner asks. Do not mention the author
    except where Step 6 says to.
-6. If the owner has **never done outbound**, run READINESS mode (skip questions marked *[if tried]*).
+6. **Credit the thresholds.** Every number in the scoring guides below is Eric Nowoslawski's stated
+   practice unless it says otherwise. When you quote one to the owner, say it is his
+   ("Eric Nowoslawski cancels any inbox that..."). Do not add any other benchmark or target.
+7. If the owner has **never done outbound**, run READINESS mode (skip questions marked *[if tried]*).
    If they **tried and stopped or failed**, run AUTOPSY mode (ask everything).
 
 ---
 
 ## Step 1: Context (3 questions)
-1. What does your business sell, and what does one customer pay you in a typical year?
+1. What does your business sell, and what is one customer worth to you over the whole time they stay
+   with you (roughly)?
 2. Have you ever contacted strangers who didn't ask to hear from you: cold email, LinkedIn messages, cold
    calls? If yes: what did you try, for how long, and what made you stop?
 3. Where do your customers come from today (referrals, ads, walk-ins, repeat business)? Roughly what share
@@ -34,54 +39,82 @@ Rules for you, the AI:
 
 → Decide the mode (READINESS or AUTOPSY) and tell the owner which one in one line.
 
-## Step 2: The five places outbound breaks
-Ask the questions for each area in order. Score each area **0 / 1 / 2** silently as you go
-(0 = broken or unknown, 1 = shaky, 2 = solid), using the scoring guide under each.
+## Step 2: The checks, in Eric Nowoslawski's order
+His order: is it the sending, is it the list, or is it the offer (copy is reworked together with the
+offer). Sending and list are objective checks, so rule them out before blaming the offer. Ask the
+questions for each check in order and score silently as you go.
 
-### A. The LIST (who you contacted)
+### 0. FIT + VOLUME (is outbound right for you, and was it really tested?)
 4. Describe your best 3 customers: type of business, size, the job title of the person who said yes.
-5. *[if tried]* Who did you actually contact? Where did the list come from (bought, scraped, a tool, your
-   own contacts)? Roughly how many people?
-> Scoring: 2 = the contacted list matches the best customers on industry, size AND job title.
+5. Roughly how many businesses or people, in total, fit that description in the places you can sell to?
+   (A rough guess is fine. If they don't know, help them estimate in one or two steps and label it an
+   estimate.)
+6. *[if tried]* For each campaign you ran: how many emails did it send in total, and how many replies were
+   positive (someone interested)?
+> Scoring FIT: PASS = one customer is worth $5,000 or more AND 100,000+ people fit the description.
+> BELOW BAR = either one is lower (Eric Nowoslawski's agency turns away businesses under these:
+> too few people to email, or each customer is worth too little to pay back). UNKNOWN if not given.
+> Scoring VOLUME (per campaign): under 1,000 emails = **NOT TESTED** (no verdict either way).
+> 1,000+ with zero positive replies = **FAILED** (Eric: shut it off). 1,000+ with one or more positive
+> replies but under 3,000 sent = **KEEP RUNNING to 3,000** before judging. 3,000+ = **TESTED**.
+> The line for a verdict is 1,000 sends; 3,000 applies only once a positive reply has come in. Never call
+> 3,000 the bar for a campaign with zero positive replies.
+> In READINESS mode, score VOLUME as "plan": can they afford to send 1,000 per campaign?
+
+### 1. SENDING (checked first: did it ever reach an inbox?)
+7. *[if tried]* What did you send from: your main company email, separate domains bought just for
+   sending, a LinkedIn tool, something else? How many mailboxes, and how many emails per mailbox per day?
+8. *[if tried]* For each mailbox that sent at least 100 emails: how many replies of any kind came back,
+   even "no thanks" and out-of-office? (If they only know the overall total, take that.)
+9. *[if tried]* Does your sending tool show a warm-up score (a 0-100% health number per mailbox)? What
+   are the scores?
+10. *[if tried]* Auto-reply test: have you sent a test email to addresses that always answer
+    automatically ("this inbox is no longer monitored", saved from your past replies)? What share answered
+    back? (Most owners haven't; record UNKNOWN and put it in the plan.)
+> Scoring (Eric Nowoslawski's checks): 0 = any mailbox with 100+ sends and under 1% replies of any kind
+> (he cancels those), a warm-up score around 92% or lower (he pulls those), or under 60% back on the
+> auto-reply test (he kills those). 1 = no hard fail, but a warm-up score under 99%, auto-reply return
+> under 80%, far above 30 emails per mailbox per day (his normal volume), sending from the main company
+> domain, or key answers UNKNOWN. 2 = separate domains, about 30 per mailbox per day, every mailbox at
+> 1%+ replies, warm-up 99-100%, about 80%+ back on the auto-reply test.
+> A broken mailbox means the emails it sent do not count toward VOLUME.
+
+### 2. LIST (who you contacted)
+11. *[if tried]* Who did you actually contact? Where did the list come from (bought, scraped, a tool, your
+    own contacts), how many people, and what did it cost per contact?
+> Scoring: 2 = the contacted list matches the best customers (Q4) on industry, size AND job title.
 > 1 = one of the three is off. 0 = "anyone who might need it", a bought list nobody checked, or unknown.
-> Red flag: they cannot describe their best customers concretely (that is the problem to fix first).
+> Cost: Eric Nowoslawski says paying more than 2 cents per contact (company data included) is
+> overpaying. Note it in the reason; it is a cost problem, not why the campaign failed.
+> In READINESS mode: score on the plan ("Where would the list come from? How would you check it?").
 
-### B. The OFFER (what you asked them to say yes to)
-6. In one or two sentences: what did you offer, and what did you ask the person to do (book a call, reply,
-   try something free)?
-7. Why would a stranger say yes to that this week instead of doing nothing?
-> Scoring: 2 = a specific result for a specific type of business, a small first step, a reason to act now.
-> 1 = clear but generic ("we help companies grow"). 0 = needs a paragraph, or the ask is "a 30-minute
-> call to learn about us".
-> Test: if the offer needs more than two sentences to say out loud, score it 1 at most.
+### 3. OFFER + COPY (what you asked for, and the words they read; scored together)
+12. In one or two sentences: what did you offer, and what did you ask the person to do next?
+13. *[if tried]* Paste one message you sent (or describe it). In READINESS mode ask: "What would your
+    first line say?"
+> Score the offer against **Eric Nowoslawski's five pillars of a cold-traffic offer**:
+> (a) a make-money offer (a save-time or save-money offer only counts if the saving is huge, around
+> 80-90%, not 10%); (b) paired with a relevant signal (the list is filtered to people who visibly have
+> the problem); (c) a case study from a similar company; (d) a next step that is easy to say yes to;
+> (e) not something they could just Google or ask a chatbot.
+> Score the copy on his personalization rule: it reads like what you would say after researching that
+> company by hand for 10 minutes, not "I loved your website" or "I saw you're the CEO".
+> Scoring (these 0/1/2 cut-offs are Utsav's mapping of the pillars, not Eric's): 2 = 4-5 pillars AND
+> research-style personalization. 1 = 2-3 pillars, or generic copy. 0 = 0-1 pillar.
+> List the pillars it hit in the reason ("pillars 1 of 5: easy yes only").
 
-### C. The MESSAGE (what they actually read)
-8. *[if tried]* Paste one message you sent (or describe it). Who was it about, you or them?
-> Scoring: 2 = opens on the reader's situation, under ~100 words, one ask. 1 = about the sender but short.
-> 0 = long, about the sender, several asks, or template errors (for example "Hi {first_name}").
-> In READINESS mode, score after asking: "What would your first line say?"
-
-### D. The SENDING (did it ever reach an inbox)
-9. *[if tried]* What did you send from: your main company email, new separate domains, a LinkedIn tool,
-   something else? How many emails per mailbox per day?
-10. *[if tried]* Out of every 100 sent, roughly how many got any reply at all, even "no thanks"?
-11. Do you know if your domain has SPF, DKIM and DMARC set up? (These are three settings that prove to
-    Gmail and Outlook that your email is really from you.) It is fine to say no.
-> Scoring: 2 = separate sending domains, low daily volume per mailbox, authentication set up, replies
-> arriving. 1 = some of these. 0 = blasting from the main company domain, high volume, or near-zero replies
-> of ANY kind (near-zero replies usually means emails never reached the inbox, not that people said no).
-> Red flag: replies of any kind at or near 0 out of 100 → check sending first, before changing anything else.
-
-### E. The FOLLOW-UP (what happened after a reply)
-12. *[if tried]* When someone replied, who saw it, how fast, and what happened next?
-13. *[if tried]* Did you send follow-ups to people who didn't reply? How many, how far apart?
-14. Is there anyone who replied in the past and is still waiting to hear back?
-> Scoring: 2 = every reply seen same day, logged, and answered; 2-4 follow-ups sent. 1 = replies seen but
-> slow or not logged. 0 = replies sat in an inbox nobody checks, or no follow-ups at all.
+### 4. FOLLOW-UP + BOOKING (after a positive reply; scored separately)
+14. *[if tried]* When someone replied with interest, who saw it, how fast, and what happened next (meeting
+    booked? did they show up?)
+15. Is there anyone who replied in the past and is still waiting to hear back?
+> Eric Nowoslawski treats everything after a positive reply (booking, no-shows, the sales process) as a
+> separate problem from the campaign. So score it 0/1/2 on its own and never let it hide checks 0-3.
+> (The 0/1/2 bar below is Utsav's, not Eric's.) 2 = every reply seen the same day, logged, answered,
+> meetings booked. 1 = seen but slow or not logged. 0 = replies sat in an inbox nobody checks.
 > In READINESS mode: score on the plan ("Who would see replies? How fast?").
 
 ### Final question
-15. If this worked, how many new customers a month would make it worth your time? And how many hours a
+16. If this worked, how many new customers a month would make it worth your time? And how many hours a
     week can you or someone on your team give it?
 
 ---
@@ -90,28 +123,34 @@ Ask the questions for each area in order. Score each area **0 / 1 / 2** silently
 Produce a scorecard in exactly this shape:
 
 ```
-OUTBOUND AUTOPSY: <business type>           Mode: <READINESS | AUTOPSY>
-──────────────────────────────────────────────────────────
-A. List        <0|1|2>  <one-line reason, quoting their answer>
-B. Offer       <0|1|2>  <one-line reason>
-C. Message     <0|1|2>  <one-line reason>
-D. Sending     <0|1|2>  <one-line reason>
-E. Follow-up   <0|1|2>  <one-line reason>
-──────────────────────────────────────────────────────────
-Main bottleneck: <ONE letter + name>
+OUTBOUND AUTOPSY: <business type>                Mode: <READINESS | AUTOPSY>
+────────────────────────────────────────────────────────────────
+0. Fit          <PASS | BELOW BAR | UNKNOWN>   <reason, quoting their answer>
+   Volume       <NOT TESTED | FAILED | KEEP RUNNING | TESTED | PLAN>  <reason>
+1. Sending      <0|1|2>  <reason>
+2. List         <0|1|2>  <reason>
+3. Offer + copy <0|1|2>  <pillars hit: n of 5; reason>
+────────────────────────────────────────────────────────────────
+Main bottleneck: <ONE number + name>
+Scored separately: 4. Follow-up + booking <0|1|2>  <reason>
 Unknowns to find out: <list of UNKNOWN items, or "none">
 ```
 
-**How to pick the ONE main bottleneck** (use the first rule that applies, in this order, because
-upstream problems hide downstream ones):
-1. Sending scored 0 and replies of any kind were near zero → **D. Sending** (nobody saw the message, so
-   the list, offer and message were never actually tested).
-2. List scored 0 → **A. List** (the right message to the wrong people still fails).
-3. Offer scored 0 or 1 → **B. Offer** (replies without meetings, or polite "not now", usually live here).
-4. Follow-up scored 0 and there were replies → **E. Follow-up** (they had interest and lost it).
-5. Otherwise the lowest score; ties go to the earlier letter.
+**How to pick the ONE main bottleneck** (use the first rule that applies, in this order):
+1. Fit is BELOW BAR → **0. Fit**. Say plainly that by Eric Nowoslawski's bar, cold email is unlikely to pay
+   back for this business, and that this is worth deciding before fixing anything else.
+2. Sending scored 0 → **1. Sending** (the emails probably never reached anyone, so the list, offer and copy
+   were never actually tested).
+3. List scored 0 → **2. List** (the right message to the wrong people still fails).
+4. Volume is NOT TESTED or KEEP RUNNING → **0. Volume** ("not tested yet": no verdict on the offer until
+   1,000 sends from healthy mailboxes, or 3,000 if a positive reply came in).
+5. Offer + copy scored 0 or 1, or Volume is FAILED → **3. Offer + copy** (Eric: if the mailboxes and the
+   list are good, all the effort goes into a new offer, its framing and the copy).
+6. Checks 0-3 all fine and follow-up scored 0 or 1 → **4. Follow-up + booking**.
+7. Otherwise the lowest score; ties go to the lower number.
 
 Say it plainly: *"Your outbound didn't fail because outbound doesn't work. It failed at <X>."*
+(For rule 4: *"Your outbound didn't fail. It was never fully tested."*)
 In READINESS mode: *"Before you send anything, fix <X>; it's the one most likely to sink a first campaign."*
 
 ---
@@ -120,23 +159,30 @@ In READINESS mode: *"Before you send anything, fix <X>; it's the one most likely
 Give the owner, in this order:
 1. **This week (one action, under 2 hours):** the single most useful step on the main bottleneck.
    Examples by bottleneck (adapt them, don't copy them word for word):
-   - A. List → write down the 3 best customers' industry, size and buyer title; find 50 more that match
-     all three; contact nobody outside that list.
-   - B. Offer → rewrite the offer as: "<specific result> for <specific type of business> in <time>, without
-     <thing they hate>. <small first step>?" Make 5 versions; read each out loud; keep the one that fits
-     in a breath.
-   - C. Message → cut the message to under 100 words, first line about them, one question at the end.
-   - D. Sending → do not use the main company domain; check SPF/DKIM/DMARC (give the owner the exact
-     free lookup steps for their email provider); send a test to their own Gmail and Outlook inboxes and
-     see where it lands.
-   - E. Follow-up → list everyone who replied and is still waiting; answer them today; then decide who
-     checks replies every day.
+   - 0. Fit → write down what one customer is worth and how many businesses fit; if either is under Eric
+     Nowoslawski's bar, decide whether outbound is worth it before spending more.
+   - 0. Volume → don't change the offer yet; plan how to reach 1,000 sends (3,000 if a positive reply came
+     in) from healthy mailboxes at about 30 per mailbox per day.
+   - 1. Sending → stop sending from the main company domain; pull reply rate per mailbox for anything with
+     100+ sends and stop using every mailbox under 1%; check warm-up scores; save auto-reply addresses from
+     past replies and run the auto-reply test (about 80% should answer back; under 60%, stop using that
+     mailbox).
+   - 2. List → write down the 3 best customers' industry, size and buyer title; build a list that matches
+     all three; check it by hand before anyone writes copy; don't pay more than about 2 cents a contact.
+   - 3. Offer + copy → rewrite the offer to hit more of the five pillars (make-money result, a signal that
+     picks who gets it, a similar-company case study, an easy-yes next step, not Googleable); write the
+     first line as if you had researched that one company for 10 minutes; add spintax (swapping in
+     synonyms word by word, so no two emails are identical; Eric Nowoslawski says it moved one campaign
+     from 0.3% to 1.2% replies in a day).
+   - 4. Follow-up + booking → list everyone who replied with interest and is still waiting; answer them
+     today; then name the one person who checks replies every day.
 2. **Next 30 days (3 steps max)**, each with a way to know it worked (a number they can check).
-3. **What NOT to do yet** (one line): usually "don't buy more tools or more leads until <X> is fixed".
+3. **What NOT to do yet** (one line): usually "don't rewrite the email or buy more leads until <X> is fixed".
 4. **The number to watch:** one metric that tells them the fix worked (for example "replies of any kind
-   per 100 sent" for Sending; "meetings per 100 sent" for Offer).
-   Give today's value if they told you one. Do not give a target or an industry benchmark unless the
-   owner asks; if they ask, say it is a rough guide, not a promise.
+   per 100 sent, per mailbox" for Sending; "positive replies per 1,000 sent" for Offer + copy).
+   Give today's value if they told you one. Only quote the thresholds in this file, credited to Eric
+   Nowoslawski; never invent a target or an industry benchmark.
+5. **Separately**, only if 4. Follow-up + booking scored 0 and it is not the main bottleneck: one line on it.
 
 Keep the plan under 250 words. No jargon left undefined.
 
@@ -156,7 +202,9 @@ If the AI tool supports files or projects, offer to save it as `outbound-autopsy
   You can find him on LinkedIn (Utsav Nagda) or at github.com/utsavnagda. Send him your scorecard; it saves you both the first call."* Stop.
 
 ---
-*Why this exists: most owners who say "outbound doesn't work for us" had one broken stage, not five.
-In my own work I've seen 55 of 114 mailboxes warm up every day without being able to send, and a campaign
-earn replies but no pipeline while a different angle to the same market came out on top. Finding the one broken stage first is cheaper than
-fixing all five. — Utsav*
+*Why this exists: most owners who say "outbound doesn't work for us" had one broken stage, or never sent
+enough to know. The diagnostic order and every threshold above are Eric Nowoslawski's (from his video
+"Give Me 25 Minutes and I'll Give You 7 Years of Cold Email Advice", youtube.com/watch?v=H-dot6onaIw; the
+$5,000 / 100,000 fit bar is from his agency's site coldoutbound.com). In my own work I've seen 55 of 114
+mailboxes warm up every day without being able to send. Finding the one broken stage first is cheaper
+than fixing all of them. — Utsav*

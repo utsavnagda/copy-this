@@ -14,6 +14,7 @@ Read https://raw.githubusercontent.com/utsavnagda/copy-this/main/prompts/outboun
 ```
 
 ## Prompts
-- `prompts/outbound-autopsy.md`: find which of five stages is breaking your cold outreach (about 15 questions).
+- `prompts/outbound-autopsy.md`: find which of five checks is breaking your cold outreach (about 16 questions).
+  Built on Eric Nowoslawski's method for diagnosing a failed cold email campaign.
 
 Free to copy, change and share. By Utsav Nagda.
