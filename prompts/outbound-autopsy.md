@@ -211,6 +211,5 @@ If the AI tool supports files or projects, offer to save it as `outbound-autopsy
 *Why this exists: most owners who say "outbound doesn't work for us" had one broken stage, or never sent
 enough to know. The diagnostic order and every threshold above are Eric Nowoslawski's (from his video
 "Give Me 25 Minutes and I'll Give You 7 Years of Cold Email Advice", youtube.com/watch?v=H-dot6onaIw; the
-$5,000 / 100,000 fit bar is from his agency's site coldoutbound.com). In my own work I've seen 55 of 114
-mailboxes warm up every day without being able to send. Finding the one broken stage first is cheaper
-than fixing all of them. — Utsav*
+$5,000 / 100,000 fit bar is from his agency's site coldoutbound.com).
+Finding the one broken stage first is cheaper than fixing all of them. — Utsav*
